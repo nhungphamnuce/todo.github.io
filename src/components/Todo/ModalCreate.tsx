@@ -46,6 +46,14 @@ const ModalCreate = ({ open, handleClose }: Props) => {
         }
         dispatch(AddTodo(todoValue));
         dispatch(createTodo(todoValue))
+        setTodoValue({
+            ...todoValue,
+            attributes: {
+                ...todoValue.attributes,
+                name: ''
+            }
+        })
+        setErroMessage('');
         handleClose();
     };
 
@@ -75,8 +83,8 @@ const ModalCreate = ({ open, handleClose }: Props) => {
                     <TextField
                         id="outlined-multiline-flexible"
                         label="Name"
-                        multiline
                         sx={{ width: '100%', my: 1 }}
+                        value={todoValue.attributes.name}
                         onChange={(e) =>
                             setTodoValue({
                                 ...todoValue,
@@ -119,7 +127,7 @@ const ModalCreate = ({ open, handleClose }: Props) => {
                             labelId="demo-simple-select-standard-label"
                             id="demo-simple-select-standard"
                             label="Age"
-                            value={todoValue.status}
+                            value={todoValue.attributes.status}
                             onChange={(e) =>
                                 setTodoValue({
                                     ...todoValue,

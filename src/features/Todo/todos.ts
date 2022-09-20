@@ -1,9 +1,7 @@
-import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../app/Store';
 import { TODOS_URL } from '../../constants/Url';
 import { ITodo } from '../../models/ITodo';
-import { ListResponse } from '../../models/Response';
 import { axiosTodo } from './../../aixos/todoAxios';
 
 export interface ITodoState {

@@ -117,7 +117,7 @@ const ModalEdit = ({ open, handleClose, todo }: Props) => {
                             labelId="demo-simple-select-standard-label"
                             id="demo-simple-select-standard"
                             label="Age"
-                            value={todoValue.status}
+                            value={todoValue.attributes.status}
                             onChange={(e) =>
                                 setTodoValue({
                                     ...todoValue,
