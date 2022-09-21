@@ -89,7 +89,7 @@ const ModalViewDetail = ({ open, handleClose, todo }: Props) => {
 
                     <LocalizationProvider dateAdapter={AdapterMoment}>
                         <DesktopDatePicker
-                            label="Dealine"
+                            label="Deadline"
                             inputFormat="MM/DD/YYYY"
                             value={todoValue.attributes.end_date}
                             onChange={(e) =>
